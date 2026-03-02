@@ -13,4 +13,5 @@ Pergerakan pada game memang bisa dilakukan dengan hanya velocity dan proses fisi
 
 ### Coyote Time & Jump Buffer 
 Coyote Time dan Jump Buffer itu sangat erat kaitannya dengan Jump, entah itu di 2D atau 3D dua hal ini itu ada. 
-1. Coyote Time sendiri itu seperti kamu diberikan waktu mengambang diudara dan diizinkan melompat 
+1. Coyote Time sendiri itu seperti kamu diberikan waktu mengambang diudara dan diizinkan melompat. Coyote Time itu ada karena banyak player yang sering menggunakan momentum melompat di ujung ground atau ledge. Jika tidak menggunakan Coyote Time, karakter akan langsung jatuh dan player tidak ada kesempatan untuk lompat.
+2. Jump Buffer itu ibaratkan kamu menyimpan lompatan untuk digunakan nanti setelah karakter menyentuh tanah. Kamu bisa menekan tombol jump diudara, dan akan disimpan sementara. Saat sudah mendarat di ground simpanan tadi akan langsung dikeluarkan, dan membuat karaktermu melompat
