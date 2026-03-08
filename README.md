@@ -15,3 +15,6 @@ Pergerakan pada game memang bisa dilakukan dengan hanya velocity dan proses fisi
 Coyote Time dan Jump Buffer itu sangat erat kaitannya dengan Jump, entah itu di 2D atau 3D dua hal ini itu ada. 
 1. Coyote Time sendiri itu seperti kamu diberikan waktu mengambang diudara dan diizinkan melompat. Coyote Time itu ada karena banyak player yang sering menggunakan momentum melompat di ujung ground atau ledge. Jika tidak menggunakan Coyote Time, karakter akan langsung jatuh dan player tidak ada kesempatan untuk lompat.
 2. Jump Buffer itu ibaratkan kamu menyimpan lompatan untuk digunakan nanti setelah karakter menyentuh tanah. Kamu bisa menekan tombol jump diudara, dan akan disimpan sementara. Saat sudah mendarat di ground simpanan tadi akan langsung dikeluarkan, dan membuat karaktermu melompat
+
+### Weightlifting Mechanic
+Karena ini cuman movement dasar, maka mechanic "Mengangkat Bebannya" tidak ada, untuk sementara diganti dengan toggle (1, 2, 3) pada keyboard. Intinya mechanic ini mengatur kecepatan akselerasi dari player berdasarkan dari massa yang sedang dia bawwa. Berawal dari 0 hingga ke 100 kg. 
