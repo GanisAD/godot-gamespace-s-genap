@@ -24,6 +24,9 @@ var _direction: float = 0
 var _coyote_timer: float = 0
 var _jump_buffer_timer: float = 0
 
+func get_direction() -> float:
+	return _direction
+
 ## Fungsi Process ini digunakan untuk memproses game secara terus menerus tanpa henti
 ## sampai game dihentikan
 func _process(_delta: float) -> void:
@@ -51,6 +54,7 @@ func _physics_process(delta: float) -> void:
 func _move() -> void:
 	_direction = Input.get_axis("left", "right")
 	if _direction != 0:
+		# velocity itu hasil kali dari arah dan kecepatan
 		velocity.x = move_toward(velocity.x, move_speed * _direction * speed_mult, acceleration)
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction)
