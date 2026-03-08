@@ -29,10 +29,13 @@ func _update_closest_item() -> void:
 				closest_item = body
 	
 	if current_closest_item != closest_item:
+		# panggil fungsi undetected() pada item lama
 		if current_closest_item and is_instance_valid(current_closest_item):
 			if current_closest_item.has_method("undetected"):
 				current_closest_item.undetected()
 		
+		# assign item terdekat sekarang dengan yang baru
 		current_closest_item = closest_item
+		# panggil fungsi detected() pada item baru
 		if current_closest_item and current_closest_item.has_method("detected"):
 			current_closest_item.detected()
