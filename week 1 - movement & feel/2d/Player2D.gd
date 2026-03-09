@@ -25,6 +25,8 @@ extends CharacterBody2D
 @export var current_weight: float = 0.0 
 @export var weight_penalty_factor: float = 0.7
 
+@onready var weight_label:Label  = get_tree().root.find_child("Label", true, false)
+
 var _direction: float = 0
 var _coyote_timer: float = 0.0
 var _jump_buffer_timer: float = 0
@@ -116,6 +118,6 @@ func _unhandled_input(event: InputEvent) -> void:
 # Fungsi pembantu agar terlihat rapi di Output/Console
 func _print_demo_status(status: String) -> void:
 	print("--- DEMO MEKANIK ---")
-	print("Status Beban: ", status)
-	print("Current Weight: ", current_weight)
+	print("Status Beban: ", )
+	weight_label.text = "Weight : %d" % current_weight 
 	print("Speed Modifier: ", 1.0 - (current_weight / max_weight * weight_penalty_factor))
