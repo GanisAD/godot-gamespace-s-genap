@@ -16,7 +16,9 @@ func _ready() -> void:
 func _on_body_enter(body: Node2D) -> void:
 	if body.is_in_group(group_name):
 		is_body_enter = true
+		print_debug("Berhasil Maaasuk area!")
 
 func _on_body_exit(body: Node2D) -> void:
 	if body.is_in_group(group_name):
 		is_body_enter = false
+		print_debug("Telah Keluar area!")

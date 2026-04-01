@@ -12,12 +12,14 @@ config_version=5
 
 config/name="godot-gamespace-genap"
 config/tags=PackedStringArray("gamespace")
+run/main_scene="uid://fjguosc03s7x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 InventoryManager="*uid://b3ca5o41eh74g"
+GameManager="*uid://7nr5xxkdhlxm"
 
 [display]
 

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cbxosfx1beeoj"]
+
+[ext_resource type="Texture2D" uid="uid://th4tonscvlov" path="res://assets/2d/platformer pack/Tiles/flag_red_a.svg" id="1_67ohs"]
+[ext_resource type="Script" uid="uid://qisiwrlee0o8" path="res://week 2 - interaction system & inventory logic/checkpoint.gd" id="1_iy4l8"]
+[ext_resource type="Script" uid="uid://bx67yd0tqlogf" path="res://week 2 - interaction system & inventory logic/interactable item/component/AreaChecker.gd" id="2_iy4l8"]
+[ext_resource type="Texture2D" uid="uid://yg8lqa82ycit" path="res://assets/2d/platformer pack/Tiles/flag_blue_b.svg" id="3_2pj0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pj0i"]
+
+[node name="CheckPoint" type="Node2D" unique_id=509624906]
+script = ExtResource("1_iy4l8")
+active_texture = ExtResource("1_67ohs")
+inactive_texture = ExtResource("3_2pj0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1000740830]
+texture = ExtResource("1_67ohs")
+
+[node name="AreaChecker2D" type="Area2D" parent="." unique_id=611908066]
+script = ExtResource("2_iy4l8")
+group_name = "Player"
+metadata/_custom_type_script = "uid://bx67yd0tqlogf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChecker2D" unique_id=215460982]
+scale = Vector2(3.7, 3.7)
+shape = SubResource("RectangleShape2D_2pj0i")
