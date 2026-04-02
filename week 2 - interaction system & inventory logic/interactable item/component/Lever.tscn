@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dbq8wnl42y8mn"]
+
+[ext_resource type="Texture2D" uid="uid://dma8j8afpkd2j" path="res://assets/2d/platformer pack/Tiles/lever.svg" id="1_7ftjv"]
+[ext_resource type="Script" uid="uid://bx67yd0tqlogf" path="res://week 2 - interaction system & inventory logic/interactable item/component/AreaChecker.gd" id="2_t86xb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7jlx"]
+
+[node name="Lever" type="Node2D" unique_id=1716391126]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1256884064]
+texture = ExtResource("1_7ftjv")
+
+[node name="AreaChecker2D" type="Area2D" parent="." unique_id=1515324925]
+script = ExtResource("2_t86xb")
+metadata/_custom_type_script = "uid://bx67yd0tqlogf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChecker2D" unique_id=1411623897]
+scale = Vector2(5.0175753, 5)
+shape = SubResource("CircleShape2D_j7jlx")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://78lu1acphucj" path="res://assets/2d/platformer pack/BackgroundTilemap.png" id="1_urhs7"]
 [ext_resource type="Texture2D" uid="uid://bvlaxw21uwi6m" path="res://assets/2d/platformer pack/tilemap.png" id="2_cm1m4"]
+[ext_resource type="PackedScene" uid="uid://dbq8wnl42y8mn" path="res://week 2 - interaction system & inventory logic/interactable item/component/lever.tscn" id="4_7v2y0"]
 [ext_resource type="PackedScene" uid="uid://dcn0yhs82gngm" path="res://week 2 - interaction system & inventory logic/2d/area detection/Player2DAD.tscn" id="4_orpu5"]
 [ext_resource type="PackedScene" uid="uid://dypq4q8syio0p" path="res://week 2 - interaction system & inventory logic/interactable item/Item/SilverCoin.tscn" id="4_toyva"]
 [ext_resource type="PackedScene" uid="uid://c7nhe4fqyjv3p" path="res://week 2 - interaction system & inventory logic/UICoin.tscn" id="5_orpu5"]
@@ -879,6 +880,11 @@ position = Vector2(545, 287)
 
 [node name="SilverCoin2" parent="Collectibles" unique_id=1575555849 instance=ExtResource("4_toyva")]
 position = Vector2(1009, 534)
+
+[node name="Clickable" type="Node2D" parent="." unique_id=1795448252]
+
+[node name="Lever" parent="Clickable" unique_id=1716391126 instance=ExtResource("4_7v2y0")]
+position = Vector2(1108, 293)
 
 [node name="Player" parent="." unique_id=995696200 groups=["Player"] instance=ExtResource("4_orpu5")]
 position = Vector2(265, 575)

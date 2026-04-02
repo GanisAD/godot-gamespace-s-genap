@@ -12,6 +12,7 @@ config_version=5
 
 config/name="godot-gamespace-genap"
 config/tags=PackedStringArray("gamespace")
+run/main_scene="uid://fjguosc03s7x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +24,10 @@ InventoryManager="*uid://b3ca5o41eh74g"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[dotnet]
+
+project/assembly_name="godot-gamespace-genap"
 
 [global_group]
 
