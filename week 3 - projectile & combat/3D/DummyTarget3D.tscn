@@ -43,7 +43,7 @@ ProgressBar/fonts/font = null
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ihjo2")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_j1pbo")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ihjo2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_j1pbo"]
 viewport_path = NodePath("SubViewport")
 
 [node name="DummyTarget3D" type="CharacterBody3D" unique_id=1253985888]
@@ -78,4 +78,4 @@ show_percentage = false
 [node name="Healthbar" type="Sprite3D" parent="." unique_id=1296699386]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4363238, 0)
 billboard = 1
-texture = SubResource("ViewportTexture_ihjo2")
+texture = SubResource("ViewportTexture_j1pbo")
