@@ -1,6 +1,8 @@
 class_name Player3D
 extends CharacterBody3D
 
+@export var max_health: float = 100
+
 @export_group("Movement")
 @export var move_speed: float = 0
 @export var accelaration: float = 0
@@ -18,6 +20,13 @@ var _last_movement_direction: Vector3 = Vector3.ZERO
 var _gravity: float = -45
 var _coyote_timer: float = 0
 var _jump_buffer_timer: float = 0
+var _current_health: float = 0
+
+func get_current_health() -> float:
+	return _current_health
+
+func _ready() -> void:
+	_current_health = max_health
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -52,3 +61,6 @@ func _physics_process(delta: float) -> void:
 	
 	var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
 	visual.global_rotation.y = lerp_angle(visual.rotation.y, target_angle, rotation_speed * delta)
+
+func take_damage(damage: float) -> void:
+	_current_health -= damage
