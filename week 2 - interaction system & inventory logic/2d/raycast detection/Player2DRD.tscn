@@ -83,7 +83,9 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1668704961 node_paths=PackedStringArray("player")]
+modulate = Color(0.95784944, 0.95663875, 0, 1)
 position = Vector2(0, -46)
+scale = Vector2(1, 11.99)
 target_position = Vector2(70, 0)
 collide_with_areas = true
 script = ExtResource("8_rew38")

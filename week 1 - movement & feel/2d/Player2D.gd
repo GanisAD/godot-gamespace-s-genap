@@ -5,6 +5,14 @@ extends CharacterBody2D
 ## Player class digunakan untuk mengontrol semua pergerakan dari player. Mulai dari jump, move, dll.
 @export var animation: AnimatedSprite2D = null
 
+@export_group("Health")
+@export var max_health: float = 100
+
+@export_group("Projectile Data")
+@export var projectile_speed: float = 0
+@export var projectile_damage: float = 0
+@export var projectile_container: Node2D = null
+
 @export_group("Player Data")
 @export var move_speed: float = 0
 @export var jump_force: float = 0
@@ -23,9 +31,20 @@ extends CharacterBody2D
 var _direction: float = 0
 var _coyote_timer: float = 0
 var _jump_buffer_timer: float = 0
+var _last_direction: float = 0
+var _current_health: float = 0
+
+func _ready() -> void:
+	_current_health = max_health
+
+func get_current_health() -> float:
+	return _current_health
+
+func get_max_health() -> float:
+	return max_health
 
 func get_direction() -> float:
-	return _direction
+	return _last_direction
 
 ## Fungsi Process ini digunakan untuk memproses game secara terus menerus tanpa henti
 ## sampai game dihentikan
@@ -55,6 +74,7 @@ func _move() -> void:
 	_direction = Input.get_axis("left", "right")
 	if _direction != 0:
 		# velocity itu hasil kali dari arah dan kecepatan
+		_last_direction = _direction
 		velocity.x = move_toward(velocity.x, move_speed * _direction * speed_mult, acceleration)
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction)

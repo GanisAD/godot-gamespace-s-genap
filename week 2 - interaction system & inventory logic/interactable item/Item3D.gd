@@ -5,6 +5,7 @@ extends StaticBody3D
 @export var mesh: MeshInstance3D = null
 @export var viscue_text: Label = null
 
+
 var item_dict: Dictionary[String, ItemData] = {}
 var origin_material: StandardMaterial3D
 var unique_material: StandardMaterial3D
