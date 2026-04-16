@@ -34,6 +34,8 @@ autoplay = "default"
 frame_progress = 0.40770456
 
 [node name="AreaChecker2D" type="Area2D" parent="." unique_id=1920120693]
+collision_layer = 16
+collision_mask = 2
 script = ExtResource("3_sxkhf")
 group_name = "Player"
 metadata/_custom_type_script = "uid://bx67yd0tqlogf"
