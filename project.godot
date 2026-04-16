@@ -24,6 +24,10 @@ InventoryManager="*uid://b3ca5o41eh74g"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[dotnet]
+
+project/assembly_name="godot-gamespace-genap"
+
 [global_group]
 
 Player=""
