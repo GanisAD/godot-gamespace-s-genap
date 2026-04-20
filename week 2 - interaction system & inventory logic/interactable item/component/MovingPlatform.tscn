@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7ogp1vk7ojys"]
+
+[ext_resource type="Texture2D" uid="uid://ihv7hmjjq33m" path="res://assets/2d/platformer pack/Tiles/bridge.svg" id="1_rymca"]
+[ext_resource type="Script" uid="uid://c35c1ba0shxbk" path="res://week 2 - interaction system & inventory logic/interactable item/component/MovingPlatform.gd" id="1_tivgr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tivgr"]
+size = Vector2(65, 35)
+
+[node name="MovingBridge" type="AnimatableBody2D" unique_id=1004543507]
+script = ExtResource("1_tivgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=716963921]
+position = Vector2(0, 15)
+texture = ExtResource("1_rymca")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=163571466]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_tivgr")

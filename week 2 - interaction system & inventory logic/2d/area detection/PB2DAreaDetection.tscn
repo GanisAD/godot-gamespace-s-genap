@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://78lu1acphucj" path="res://assets/2d/platformer pack/BackgroundTilemap.png" id="1_urhs7"]
 [ext_resource type="Texture2D" uid="uid://bvlaxw21uwi6m" path="res://assets/2d/platformer pack/tilemap.png" id="2_cm1m4"]
-[ext_resource type="PackedScene" uid="uid://dbq8wnl42y8mn" path="res://week 2 - interaction system & inventory logic/interactable item/component/lever.tscn" id="4_7v2y0"]
+[ext_resource type="PackedScene" uid="uid://dbq8wnl42y8mn" path="res://week 2 - interaction system & inventory logic/interactable item/component/Lever.tscn" id="4_7v2y0"]
 [ext_resource type="PackedScene" uid="uid://dcn0yhs82gngm" path="res://week 2 - interaction system & inventory logic/2d/area detection/Player2DAD.tscn" id="4_orpu5"]
 [ext_resource type="PackedScene" uid="uid://dypq4q8syio0p" path="res://week 2 - interaction system & inventory logic/interactable item/Item/SilverCoin.tscn" id="4_toyva"]
 [ext_resource type="PackedScene" uid="uid://c7nhe4fqyjv3p" path="res://week 2 - interaction system & inventory logic/UICoin.tscn" id="5_orpu5"]
+[ext_resource type="PackedScene" uid="uid://c7ogp1vk7ojys" path="res://week 2 - interaction system & inventory logic/interactable item/component/MovingPlatform.tscn" id="7_hktms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_038p0"]
 texture = ExtResource("1_urhs7")
@@ -883,15 +884,28 @@ position = Vector2(1009, 534)
 
 [node name="Clickable" type="Node2D" parent="." unique_id=1795448252]
 
-[node name="Lever" parent="Clickable" unique_id=1716391126 instance=ExtResource("4_7v2y0")]
-position = Vector2(1108, 293)
+[node name="Lever" parent="Clickable" unique_id=1716391126 node_paths=PackedStringArray("target_platforms") instance=ExtResource("4_7v2y0")]
+position = Vector2(559, 543)
+target_platforms = [NodePath("../../Platform1"), NodePath("../../Platform2")]
 
 [node name="Player" parent="." unique_id=995696200 groups=["Player"] instance=ExtResource("4_orpu5")]
 position = Vector2(265, 575)
-move_speed = 400.0
+move_speed = 300.0
+jump_force = 300.0
 acceleration = 80.0
 jump_mult = 1.2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1541625440]
 
 [node name="UiCoin" parent="CanvasLayer" unique_id=183794922 instance=ExtResource("5_orpu5")]
+visible = false
+
+[node name="Platform1" parent="." unique_id=1004543507 instance=ExtResource("7_hktms")]
+position = Vector2(695, 559)
+move_offset = Vector2(0, -200)
+duration = 3.0
+
+[node name="Platform2" parent="." unique_id=2026843706 instance=ExtResource("7_hktms")]
+position = Vector2(1221, 347)
+move_offset = Vector2(0, 215)
+duration = 3.0
