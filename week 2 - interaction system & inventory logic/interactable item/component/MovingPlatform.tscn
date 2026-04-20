@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://c7ogp1vk7ojys"]
 
 [ext_resource type="Texture2D" uid="uid://ihv7hmjjq33m" path="res://assets/2d/platformer pack/Tiles/bridge.svg" id="1_rymca"]
 [ext_resource type="Script" uid="uid://c35c1ba0shxbk" path="res://week 2 - interaction system & inventory logic/interactable item/component/MovingPlatform.gd" id="1_tivgr"]
+=======
+[gd_scene format=3 uid="uid://chr005xg53obo"]
+
+[ext_resource type="Texture2D" uid="uid://ihv7hmjjq33m" path="res://assets/2d/platformer pack/Tiles/bridge.svg" id="1_rymca"]
+[ext_resource type="Script" path="res://week 2 - interaction system & inventory logic/interactable item/component/MovingPlatform.gd" id="1_tivgr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tivgr"]
 size = Vector2(65, 35)
